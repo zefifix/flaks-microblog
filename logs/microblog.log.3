@@ -1,0 +1,113 @@
+2020-11-16 22:45:57,045 ERROR: Exception on /index [GET] [in /Users/user/PycharmProjects/venvs/microblog/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/user/PycharmProjects/venvs/microblog/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/user/PycharmProjects/venvs/microblog/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/user/PycharmProjects/venvs/microblog/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/user/PycharmProjects/venvs/microblog/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/user/PycharmProjects/venvs/microblog/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/user/PycharmProjects/venvs/microblog/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/user/PycharmProjects/venvs/microblog/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/user/PycharmProjects/microblog/app/routes.py", line 31, in index
+    return render_template('index.html', title='Home', posts = posts)
+  File "/Users/user/PycharmProjects/venvs/microblog/lib/python3.8/site-packages/flask/templating.py", line 137, in render_template
+    return _render(
+  File "/Users/user/PycharmProjects/venvs/microblog/lib/python3.8/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/Users/user/PycharmProjects/venvs/microblog/lib/python3.8/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/Users/user/PycharmProjects/venvs/microblog/lib/python3.8/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/Users/user/PycharmProjects/venvs/microblog/lib/python3.8/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/user/PycharmProjects/microblog/app/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/user/PycharmProjects/microblog/app/templates/base.html", line 29, in top-level template code
+    {% block content %}{% endblock %}
+  File "/Users/user/PycharmProjects/microblog/app/templates/index.html", line 19, in block "content"
+    </p>
+  File "/Users/user/PycharmProjects/microblog/app/templates/_post.html", line 3, in top-level template code
+    <td><img src="{{ post.author.avatar(36) }}"></td>
+jinja2.exceptions.UndefinedError: 'dict object' has no attribute 'avatar'
+2020-11-16 22:47:13,214 INFO: Microblog startup [in /Users/user/PycharmProjects/microblog/app/__init__.py:43]
+2020-11-16 22:47:18,704 ERROR: Exception on / [GET] [in /Users/user/PycharmProjects/venvs/microblog/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/user/PycharmProjects/venvs/microblog/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/user/PycharmProjects/venvs/microblog/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/user/PycharmProjects/venvs/microblog/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/user/PycharmProjects/venvs/microblog/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/user/PycharmProjects/venvs/microblog/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/user/PycharmProjects/venvs/microblog/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/user/PycharmProjects/venvs/microblog/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/user/PycharmProjects/microblog/app/routes.py", line 31, in index
+    return render_template('index.html', title='Home', posts = posts)
+  File "/Users/user/PycharmProjects/venvs/microblog/lib/python3.8/site-packages/flask/templating.py", line 137, in render_template
+    return _render(
+  File "/Users/user/PycharmProjects/venvs/microblog/lib/python3.8/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/Users/user/PycharmProjects/venvs/microblog/lib/python3.8/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/Users/user/PycharmProjects/venvs/microblog/lib/python3.8/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/Users/user/PycharmProjects/venvs/microblog/lib/python3.8/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/user/PycharmProjects/microblog/app/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/user/PycharmProjects/microblog/app/templates/base.html", line 29, in top-level template code
+    {% block content %}{% endblock %}
+  File "/Users/user/PycharmProjects/microblog/app/templates/index.html", line 6, in block "content"
+    {{ form.hidden_tag() }}
+  File "/Users/user/PycharmProjects/venvs/microblog/lib/python3.8/site-packages/jinja2/environment.py", line 471, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'form' is undefined
+2020-11-16 22:47:27,607 ERROR: Exception on /index [GET] [in /Users/user/PycharmProjects/venvs/microblog/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/user/PycharmProjects/venvs/microblog/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/user/PycharmProjects/venvs/microblog/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/user/PycharmProjects/venvs/microblog/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/user/PycharmProjects/venvs/microblog/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/user/PycharmProjects/venvs/microblog/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/user/PycharmProjects/venvs/microblog/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/user/PycharmProjects/venvs/microblog/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/user/PycharmProjects/microblog/app/routes.py", line 31, in index
+    return render_template('index.html', title='Home', posts = posts)
+  File "/Users/user/PycharmProjects/venvs/microblog/lib/python3.8/site-packages/flask/templating.py", line 137, in render_template
+    return _render(
+  File "/Users/user/PycharmProjects/venvs/microblog/lib/python3.8/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/Users/user/PycharmProjects/venvs/microblog/lib/python3.8/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/Users/user/PycharmProjects/venvs/microblog/lib/python3.8/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/Users/user/PycharmProjects/venvs/microblog/lib/python3.8/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/user/PycharmProjects/microblog/app/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/user/PycharmProjects/microblog/app/templates/base.html", line 29, in top-level template code
+    {% block content %}{% endblock %}
+  File "/Users/user/PycharmProjects/microblog/app/templates/index.html", line 6, in block "content"
+    {{ form.hidden_tag() }}
+  File "/Users/user/PycharmProjects/venvs/microblog/lib/python3.8/site-packages/jinja2/environment.py", line 471, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'form' is undefined
+2020-11-17 00:19:21,339 INFO: Microblog startup [in /Users/user/PycharmProjects/microblog/app/__init__.py:43]
